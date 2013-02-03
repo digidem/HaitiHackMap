@@ -3,7 +3,8 @@ class App.Views.SearchView extends Backbone.View
   id: "search"
 
   events:
-    'input [type="search"]' : 'handleInput'
+    'input [type="search"]': 'handleInput'
+    'submit form': 'preventSubmission'
 
   initialize: ->
     @collection = new App.Collections.OSMResults()
@@ -35,6 +36,10 @@ class App.Views.SearchView extends Backbone.View
     q = @$(e.target).val()
     @collection.search(q)
   , 500)
+
+  preventSubmission: (e) ->
+    e.preventDefault()
+    false
 
   showResults: () ->
     @emptyResults()

@@ -5,3 +5,6 @@ $ ->
 
   $(document).ajaxStop ->
     $(".loading").removeClass("loading")
+
+  $(document).ajaxComplete (data) ->
+    @

@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+#app {
+  position: relative;
+}
+
 #map {
   min-height: 700px;
   height: 700px;
@@ -53,6 +57,25 @@
 
     &.loading {
       display: inline-block;
+    }
+  }
+}
+
+aside {
+  .filters {
+    background: rgba(255, 255, 255, 0.5);
+    line-height: 1em;
+    list-style: none;
+    padding: 15px;
+    position: absolute;
+    right: 10px;
+    top: 75px;
+    width: 200px;
+
+    input[type="checkbox"] {
+      margin-right: 0.5em;
+      margin-top: 0;
+      line-height: 1em;
     }
   }
 }

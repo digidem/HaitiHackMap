@@ -1,0 +1,23 @@
+[
+  {
+    "lat": 18.640286,
+    "lon": -72.820037,
+    "display_name": "Hospital 1",
+    "description": "",
+    "category": "Hospital"
+  },
+  {
+    "lat": 18.740286,
+    "lon": -72.920037,
+    "display_name": "Hospital 2",
+    "description": "",
+    "category": "Hospital"
+  },
+  {
+    "lat": "18.5292345",
+    "lon": "-72.6339691",
+    "display_name": "Hospital Prince",
+    "description": "",
+    "category": "Hospital"
+  }
+]
