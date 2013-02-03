@@ -23,7 +23,7 @@ class App.Views.SearchView extends Backbone.View
       """
       <form class="search_form">
         <input type="search" placeholder="Search..." />
-        <img class="loader" src="/images/loader.gif" />
+        <span class="loader" />
       </form>
       """
     )

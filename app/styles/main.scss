@@ -54,6 +54,9 @@
     top: 50%;
     margin-top: -16px;
     display: none;
+    height: 46px;
+    width: 46px;
+    background: url("/images/loader.gif") center center no-repeat;
 
     &.loading {
       display: inline-block;
