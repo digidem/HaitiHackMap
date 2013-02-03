@@ -15,9 +15,13 @@
 }
 
 #search {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
   form {
     margin: 0;
     padding: 0;
+    width: 100%;
     input[type="search"]{
       border: none;
       margin:0;
@@ -51,8 +55,7 @@
   .loader {
     position: absolute;
     right: 0;
-    top: 50%;
-    margin-top: -16px;
+    top: 0;
     display: none;
     height: 46px;
     width: 46px;
