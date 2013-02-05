@@ -5,6 +5,7 @@ class App.Views.MapView extends Backbone.View
 
   initialize: ->
     @render()
+    @$el.height($(document).height())
     @listenTo App.search, "result:select", @centerMap
     @
 
