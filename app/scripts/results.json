@@ -1,23 +1,50 @@
 [
   {
-    "lat": 18.640286,
-    "lon": -72.820037,
-    "display_name": "Hospital 1",
-    "description": "",
-    "category": "Hospital"
+    "display_name": "Zanmi Timoun,7 Rue Rivière, Port-au-Prince",
+    "category": "Organisation",
+    "lat": "18.537234",
+    "lon": "-72.320706"
   },
   {
-    "lat": 18.740286,
-    "lon": -72.920037,
-    "display_name": "Hospital 2",
-    "description": "",
-    "category": "Hospital"
+    "display_name": "Kay Fanm,[2:46:45 PM] Brendan O'Hanrahan: 11, Rue Armand Holly, Turgeau, (Babiole?); Port-au-Prince",
+    "category": "Organisation",
+    "lat": "18.528984",
+    "lon": "-72.323686"
   },
   {
-    "lat": "18.5292345",
-    "lon": "-72.6339691",
-    "display_name": "Hospital Prince",
-    "description": "",
-    "category": "Hospital"
+    "display_name": "MDM - Médecins du Monde,Paco #16 2eme Ruel Wilson, Port-au-Prince",
+    "category": "Organisation",
+    "lat": "18.533348",
+    "lon": "-72.329718"
+  },
+  {
+    "display_name": "ACAT ,Morne Hercule, 90 Bis Rue Charlemagne Peralte",
+    "category": "Organisation",
+    "lat": "18.518862",
+    "lon": "-72.28532"
+  },
+  {
+    "display_name": "Terre des Hommes, Rue Toussaint Louverture, Les Cayes, Haiti",
+    "category": "Organisation",
+    "lat": "18.193396",
+    "lon": "-73.7547"
+  },
+  {
+    "display_name": "APROSIFA, Carrefour Feuilles, Port-au-Prince",
+    "category": "Organisation",
+    "lat": "18.528776",
+    "lon": "-72.348823"
+  },
+  {
+    "display_name": "HUEH, Rue Ste Onorée, Monseigneur Guilloux; Port-au-Prince",
+    "category": "Organisation",
+    "lat": "18.54056",
+    "lon": "-72.338589"
+  },
+  {
+    "display_name": "MDM - Médecins du Monde, 11 Rue Camille L�on, Bois Verna, Port-au-Prince",
+    "category": "Branch",
+    "lat": "18.535851",
+    "lon": "-72.325662"
   }
 ]
