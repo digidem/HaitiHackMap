@@ -42,7 +42,8 @@
       var marker;
       marker = new App.Views.MarkerView({
         model: model,
-        map: this.map
+        map: this.map,
+        type: "default"
       });
       return this.map.setView(marker.location(), this.ZOOM);
     };

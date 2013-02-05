@@ -11,7 +11,8 @@ class App.Views.FiltersView extends Backbone.View
 
   render: ->
     @$el.html(@collection.map (model) ->
-      "<li><label><input type='checkbox' checked='checked' />#{model.get 'name'}</label></li>"
+      name = model.get 'name'
+      "<li><label class='#{name}'><input type='checkbox' checked='checked' />#{name}<span class='box'></span></label></li>"
     )
 
   handleClick: =>

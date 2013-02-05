@@ -92,3 +92,23 @@ aside {
     }
   }
 }
+
+.leaflet-marker-icon { background: grey; }
+
+.box {
+  width: 10px;
+  height: 10px;
+  margin-top: 5px;
+  float: right;
+}
+
+.leaflet-marker-icon.Organisation,
+.Organisation .box {
+  background-color: blue;
+}
+
+.leaflet-marker-icon.Health,
+.Health .box {
+  background-color: red;
+}
+

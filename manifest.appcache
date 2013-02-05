@@ -1,6 +1,38 @@
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
+# [object Object] (undefined, #undefined)
 CACHE MANIFEST
 
-# Time: Tue Feb 05 2013 15:57:54 GMT-0500 (EST)
+# Time: Tue Feb 05 2013 16:59:08 GMT-0500 (EST)
 # This manifest was created by confess.js, http://github.com/jamesgpearce/confess
 #
 # Retrieved URL: http://localhost:3501/
@@ -34,12 +66,10 @@ http://localhost:3501/app/images/glyphicons-halflings-white.png?1360090967
 http://localhost:3501/app/images/glyphicons-halflings.png?1360090967
 http://localhost:3501/images/loader.gif
 http://localhost:3501/styles/images/layers.png
-images/marker-icon.png
-images/marker-shadow.png
-scripts/214e4803.plugins.js
+scripts/7bb0b919.plugins.js
 scripts/vendor/8bc61845.jquery.min.js
 scripts/vendor/cf69c6f2.modernizr.min.js
-styles/88b9978f.main.css
+styles/9752daf5.main.css
 styles/9844e96f.leaflet.css
 
 NETWORK:

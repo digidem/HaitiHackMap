@@ -1,6 +1,4 @@
 [
-  { "id": 1, "name": "Hospital" },
-  { "id": 2, "name": "Police Station" },
-  { "id": 3, "name": "Psycho-social support" },
-  { "id": 4, "name": "Church" }
+  { "id": 1, "name": "Health Facility" },
+  { "id": 2, "name": "Organisation" }
 ]
