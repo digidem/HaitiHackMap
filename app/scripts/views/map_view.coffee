@@ -21,4 +21,4 @@ class App.Views.MapView extends Backbone.View
 
   resultSelected: (model) ->
     marker = new App.Views.MarkerView(model: model, map: @map, type: "default")
-    @map.setView(marker.location(), @ZOOM)
+    @map.panTo(marker.location())
