@@ -21,7 +21,7 @@
     MapView.prototype.initialize = function() {
       this.render();
       this.$el.height($(document).height());
-      this.listenTo(App.search, "result:select", this.centerMap);
+      this.listenTo(App.search, "result:select", this.resultSelected);
       return this;
     };
 
@@ -38,14 +38,14 @@
       return tiles.addTo(this.map);
     };
 
-    MapView.prototype.centerMap = function(model) {
+    MapView.prototype.resultSelected = function(model) {
       var marker;
       marker = new App.Views.MarkerView({
         model: model,
         map: this.map,
         type: "default"
       });
-      return this.map.setView(marker.location(), this.ZOOM);
+      return this.map.panTo(marker.location());
     };
 
     return MapView;

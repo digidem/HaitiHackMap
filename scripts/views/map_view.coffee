@@ -6,7 +6,7 @@ class App.Views.MapView extends Backbone.View
   initialize: ->
     @render()
     @$el.height($(document).height())
-    @listenTo App.search, "result:select", @centerMap
+    @listenTo App.search, "result:select", @resultSelected
     @
 
   render: ->
@@ -19,6 +19,6 @@ class App.Views.MapView extends Backbone.View
     tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png')
     tiles.addTo(@map)
 
-  centerMap: (model) ->
+  resultSelected: (model) ->
     marker = new App.Views.MarkerView(model: model, map: @map, type: "default")
-    @map.setView(marker.location(), @ZOOM)
+    @map.panTo(marker.location())
