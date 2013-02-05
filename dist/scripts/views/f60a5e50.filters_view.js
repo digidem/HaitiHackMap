@@ -28,7 +28,9 @@
 
     FiltersView.prototype.render = function() {
       return this.$el.html(this.collection.map(function(model) {
-        return "<li><label><input type='checkbox' checked='checked' />" + (model.get('name')) + "</label></li>";
+        var name;
+        name = model.get('name');
+        return "<li><label class='" + name + "'><input type='checkbox' checked='checked' />" + name + "<span class='box'></span></label></li>";
       }));
     };
 

@@ -15,14 +15,23 @@
     }
 
     MarkerView.prototype.initialize = function(options) {
+      this.type = options.type;
       this.map = App.map.map;
       this.display();
       return this;
     };
 
     MarkerView.prototype.display = function() {
-      var m;
-      m = L.marker(this.location());
+      var icon, m, options;
+      options = {};
+      if (this.type !== "default") {
+        console.log(this.model);
+        icon = L.divIcon({
+          className: this.model.get("category")
+        });
+        options.icon = icon;
+      }
+      m = L.marker(this.location(), options);
       m.bindPopup("" + (this.title()) + (this.details()));
       return m.addTo(this.map);
     };
