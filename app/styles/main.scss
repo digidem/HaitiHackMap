@@ -40,6 +40,8 @@
 
 .osm_results {
   display: none;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 4px 10px;
 
   li {
     overflow: hidden;
@@ -47,6 +49,11 @@
     -o-text-overflow: ellipsis;
     white-space: nowrap;
     width: 100%;
+    cursor: pointer;
+
+    &:hover {
+      color: #888;
+    }
   }
 }
 
