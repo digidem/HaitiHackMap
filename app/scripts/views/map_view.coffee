@@ -20,5 +20,5 @@ class App.Views.MapView extends Backbone.View
     tiles.addTo(@map)
 
   centerMap: (model) ->
-    marker = new App.Views.MarkerView(model: model, map: @map)
+    marker = new App.Views.MarkerView(model: model, map: @map, type: "default")
     @map.setView(marker.location(), @ZOOM)
