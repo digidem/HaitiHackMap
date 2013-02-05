@@ -40,13 +40,20 @@
 
 .osm_results {
   display: none;
-
+  margin: 0;
   li {
+    border-top: 2px solid white;
+    background: rgba(255,255,255,.75);
+    padding: 15px 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
     white-space: nowrap;
     width: 100%;
+    cursor: pointer;
+    &:hover {
+      background: rgba(225,225,255, .75);
+    }
   }
 }
 
