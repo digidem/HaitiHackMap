@@ -36,7 +36,7 @@
     };
 
     SearchView.prototype.renderForm = function() {
-      return this.$el.html("<form class=\"search_form\">\n  <input type=\"search\" placeholder=\"Search...\" />\n  <span class=\"loader\" />\n</form>");
+      return this.$el.html("<form class=\"search_form\">\n  <input type=\"search\" results=5 autosave=\"persist_search\" placeholder=\"Search...\" />\n  <span class=\"loader\" />\n</form>");
     };
 
     SearchView.prototype.renderResultPane = function() {
