@@ -22,7 +22,7 @@ class App.Views.SearchView extends Backbone.View
     @$el.html(
       """
       <form class="search_form">
-        <input type="search" placeholder="Search..." />
+        <input type="search" results=5 autosave="persist_search" placeholder="Search..." />
         <span class="loader" />
       </form>
       """
