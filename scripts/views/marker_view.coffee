@@ -7,11 +7,10 @@ class App.Views.MarkerView extends Backbone.View
     @
 
   display: ->
-    #debugger
     options = {}
     unless @type == "default"
-      console.log @model
-      icon = L.divIcon(className: @model.get("category"))
+      classes = "#{@model.get("category")} custom-icon"
+      icon = L.divIcon(className: classes)
       options.icon = icon
 
     m = L.marker(@location(), options)
