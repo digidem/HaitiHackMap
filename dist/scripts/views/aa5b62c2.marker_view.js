@@ -22,12 +22,12 @@
     };
 
     MarkerView.prototype.display = function() {
-      var icon, m, options;
+      var classes, icon, m, options;
       options = {};
       if (this.type !== "default") {
-        console.log(this.model);
+        classes = "" + (this.model.get("category")) + " custom-icon";
         icon = L.divIcon({
-          className: this.model.get("category")
+          className: classes
         });
         options.icon = icon;
       }
