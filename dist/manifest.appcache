@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-# Time: Tue Feb 05 2013 22:26:34 GMT-0500 (EST)
+# Time: Thu Feb 07 2013 17:12:25 GMT-0500 (EST)
 # This manifest was created by confess.js, http://github.com/jamesgpearce/confess
 #
 # Retrieved URL: http://localhost:3501/
@@ -18,20 +18,11 @@ CACHE MANIFEST
 #   cacheFilter: .*
 #   networkFilter: null
 #  url: http://localhost:3501
-#  configFile: /usr/lib/node_modules/yeoman/lib/support/confess.json
+#  configFile: /usr/local/share/npm/lib/node_modules/yeoman/lib/support/confess.json
 
 CACHE:
-http://a.tile.osm.org/14/4899/7332.png
-http://a.tile.osm.org/14/4900/7334.png
-http://a.tile.osm.org/14/4901/7333.png
-http://b.tile.osm.org/14/4899/7333.png
-http://b.tile.osm.org/14/4900/7332.png
-http://b.tile.osm.org/14/4901/7334.png
-http://c.tile.osm.org/14/4899/7334.png
-http://c.tile.osm.org/14/4900/7333.png
-http://c.tile.osm.org/14/4901/7332.png
-http://localhost:3501/app/images/glyphicons-halflings-white.png?1360113641
-http://localhost:3501/app/images/glyphicons-halflings.png?1360113641
+http://localhost:3501/app/images/glyphicons-halflings-white.png?1360090967
+http://localhost:3501/app/images/glyphicons-halflings.png?1360090967
 http://localhost:3501/images/categories/child.png
 http://localhost:3501/images/categories/church.png
 http://localhost:3501/images/categories/justice.png
@@ -40,11 +31,20 @@ http://localhost:3501/images/categories/police.png
 http://localhost:3501/images/categories/woman.png
 http://localhost:3501/images/loader.gif
 http://localhost:3501/styles/images/layers.png
-scripts/eb47949c.plugins.js
+http://tile.stamen.com/toner-lite/14/4899/7332.png
+http://tile.stamen.com/toner-lite/14/4899/7333.png
+http://tile.stamen.com/toner-lite/14/4899/7334.png
+http://tile.stamen.com/toner-lite/14/4900/7332.png
+http://tile.stamen.com/toner-lite/14/4900/7333.png
+http://tile.stamen.com/toner-lite/14/4900/7334.png
+http://tile.stamen.com/toner-lite/14/4901/7332.png
+http://tile.stamen.com/toner-lite/14/4901/7333.png
+http://tile.stamen.com/toner-lite/14/4901/7334.png
+scripts/c360df02.plugins.js
 scripts/vendor/8bc61845.jquery.min.js
 scripts/vendor/cf69c6f2.modernizr.min.js
-styles/8005a6cc.main.css
 styles/9844e96f.leaflet.css
+styles/d2f62d69.main.css
 
 NETWORK:
 *

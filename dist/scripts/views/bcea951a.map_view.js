@@ -18,10 +18,16 @@
 
     MapView.prototype.ZOOM = 14;
 
+    MapView.prototype.tileProvider = 'stamen';
+
     MapView.prototype.initialize = function() {
+      var _ref;
       this.render();
       this.$el.height($(document).height());
       this.listenTo(App.search, "result:select", this.resultSelected);
+      if ((_ref = this.tileProvider) == null) {
+        this.tileProvider = "osm";
+      }
       return this;
     };
 
@@ -34,8 +40,8 @@
       this.map = L.map(this.id);
       loc = [18.528984, -72.323686];
       this.map.setView(loc, this.ZOOM);
-      tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png');
-      return tiles.addTo(this.map);
+      tiles = L.tileLayer(this.tilesUrlPattern());
+      return this.map.addLayer(tiles);
     };
 
     MapView.prototype.resultSelected = function(model) {
@@ -46,6 +52,15 @@
         type: "default"
       });
       return this.map.panTo(marker.location());
+    };
+
+    MapView.prototype.tilesUrlPattern = function() {
+      switch (this.tileProvider) {
+        case "stamen":
+          return "http://tile.stamen.com/toner-lite/{z}/{x}/{y}.png";
+        case "osm":
+          return "http://{s}.tile.osm.org/{z}/{x}/{y}.png";
+      }
     };
 
     return MapView;
