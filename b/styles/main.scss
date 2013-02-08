@@ -94,34 +94,31 @@ aside {
 }
 
 .custom-icon {
-  background: grey;
-  width: 15px !important;
-  height: 15px !important;
+  width: 16px !important;
+  height: 16px !important;
   margin-left: -8px !important;
   margin-top: -6px !important;
 }
 
 .box {
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   margin-top: 2px;
   float: right;
+  background: center center no-repeat transparent url("../images/categories/default.png");
 }
 
 .custom-icon.Organisation,
-.Organisation .box { background: url("../images/categories/woman.png") center center no-repeat white; }
+.Organisation .box { background-image: url("../images/categories/women.png"); }
 
 .custom-icon.Health,
-.Health .box { background: url("../images/categories/medical.png") center center no-repeat white; }
+.Health .box { background-image: url("../images/categories/medical.png"); }
 
 .custom-icon.Justice,
-.Justice .box { background: url("../images/categories/justice.png") center center no-repeat white; }
+.Justice .box { background-image: url("../images/categories/legal.png"); }
 
 .custom-icon.Police,
-.Police .box { background: url("../images/categories/police.png") center center no-repeat white; }
+.Police .box { background-image: url("../images/categories/police.png"); }
 
 .custom-icon.Church,
-.Church .box { background: url("../images/categories/church.png") center center no-repeat white; }
-
-.custom-icon.Child,
-.Child .box { background: url("../images/categories/child.png") center center no-repeat white; }
+.Church .box { background-image: url("../images/categories/church.png"); }
