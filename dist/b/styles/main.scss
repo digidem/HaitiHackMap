@@ -1,0 +1,127 @@
+@import "compass_twitter_bootstrap";
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#app {
+  position: relative;
+}
+
+#map {
+  min-height: 700px;
+  height: 700px;
+}
+
+#search {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  form {
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+
+    input[type="search"]{
+      border: none;
+      margin: 0;
+      padding: 5px;
+      display: block;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+    }
+  }
+}
+
+.osm_results {
+  display: none;
+  margin: 0;
+  li {
+    border-top: 2px solid white;
+    background: rgba(255,255,255,.75);
+    padding: 15px 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    cursor: pointer;
+    &:hover {
+      background: rgba(225,225,255, .75);
+    }
+  }
+}
+
+.search_form {
+  position: relative;
+  .loader {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+    height: 46px;
+    width: 46px;
+    background: url("../images/loader.gif") center center no-repeat;
+
+    &.loading {
+      display: inline-block;
+    }
+  }
+}
+
+aside {
+  .filters {
+    background: rgba(255, 255, 255, 0.75);
+    line-height: 1em;
+    list-style: none;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    top: 75px;
+    width: 200px;
+
+    input[type="checkbox"] {
+      margin-right: 0.5em;
+      margin-top: 0;
+      line-height: 1em;
+    }
+  }
+}
+
+.custom-icon {
+  background: grey;
+  width: 15px !important;
+  height: 15px !important;
+  margin-left: -8px !important;
+  margin-top: -6px !important;
+}
+
+.box {
+  width: 15px;
+  height: 15px;
+  margin-top: 2px;
+  float: right;
+}
+
+.custom-icon.Organisation,
+.Organisation .box { background: url("../images/categories/woman.png") center center no-repeat white; }
+
+.custom-icon.Health,
+.Health .box { background: url("../images/categories/medical.png") center center no-repeat white; }
+
+.custom-icon.Justice,
+.Justice .box { background: url("../images/categories/justice.png") center center no-repeat white; }
+
+.custom-icon.Police,
+.Police .box { background: url("../images/categories/police.png") center center no-repeat white; }
+
+.custom-icon.Church,
+.Church .box { background: url("../images/categories/church.png") center center no-repeat white; }
+
+.custom-icon.Child,
+.Child .box { background: url("../images/categories/child.png") center center no-repeat white; }
