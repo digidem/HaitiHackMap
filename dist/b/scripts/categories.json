@@ -3,6 +3,5 @@
   { "id": 2, "name": "Organisation" },
   { "id": 3, "name": "Justice" },
   { "id": 4, "name": "Police" },
-  { "id": 5, "name": "Child" },
-  { "id": 6, "name": "Church" }
+  { "id": 5, "name": "Church" }
 ]
