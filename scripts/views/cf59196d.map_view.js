@@ -18,7 +18,7 @@
 
     MapView.prototype.ZOOM = 14;
 
-    MapView.prototype.tileProvider = 'stamen';
+    MapView.prototype.tileProvider = 'osm';
 
     MapView.prototype.initialize = function() {
       var _ref;
