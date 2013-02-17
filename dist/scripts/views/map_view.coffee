@@ -2,7 +2,7 @@ class App.Views.MapView extends Backbone.View
   tagName: 'section'
   id: 'map'
   ZOOM: 14
-  tileProvider: 'stamen' # Current options are 'stamen' and 'osm'
+  tileProvider: 'osm' # Current options are 'stamen' and 'osm'
 
   initialize: ->
     @render()
