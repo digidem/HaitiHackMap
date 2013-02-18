@@ -11,12 +11,13 @@ class App.Views.FiltersView extends Backbone.View
 
   render: ->
     @$el.html(@collection.map (model) ->
-      name = model.get 'name'
+      name = model.get 'category_name'
+
       """
       <li>
-        <label class='#{category_name}'>
+        <label class='#{name}'>
           <input type='checkbox' checked='checked' />
-          #{category_name}
+          #{name}
           <span class='box'></span>
             </label>
       </li>
