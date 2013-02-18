@@ -30,7 +30,7 @@
       return this.$el.html(this.collection.map(function(model) {
         var name;
         name = model.get('name');
-        return "<li><label class='" + name + "'><input type='checkbox' checked='checked' />" + name + "<span class='box'></span></label></li>";
+        return "<li>\n  <label class='" + category_name + "'>\n    <input type='checkbox' checked='checked' />\n    " + category_name + "\n    <span class='box'></span>\n      </label>\n</li>";
       }));
     };
 
