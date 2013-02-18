@@ -12,7 +12,13 @@
 
     Categories.prototype.model = App.Models.Category;
 
-    Categories.prototype.url = "scripts/categories.json";
+    Categories.prototype.url = function() {
+      if (window.categories_url) {
+        return window.categories_url;
+      } else {
+        return "scripts/categories.json";
+      }
+    };
 
     Categories.prototype.initialize = function() {
       this.fetch();

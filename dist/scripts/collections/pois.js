@@ -14,7 +14,13 @@
 
     Pois.prototype.model = App.Models.Poi;
 
-    Pois.prototype.url = "scripts/results.json";
+    Pois.prototype.url = function() {
+      if (window.results_url) {
+        return window.results_url;
+      } else {
+        return "scripts/results.json";
+      }
+    };
 
     Pois.prototype.initialize = function() {
       _.defer(this.grab);
