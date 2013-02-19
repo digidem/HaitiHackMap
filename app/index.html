@@ -67,6 +67,11 @@
     <!-- endbuild -->
 
     <script>
+      window.details_callback = function(model) {
+        console.log(model);
+        var str = "<note>" + model.get("category") + "</note>";
+        return str;
+      };
       L.Icon.Default.imagePath = "images";
       new window.App.Router();
     </script>
