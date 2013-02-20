@@ -26,6 +26,9 @@ class App.Views.MarkerView extends Backbone.View
     """
 
   details: =>
-    """
-    <note>#{@location().toString()}</note>
-    """
+    if window.details_callback
+      window.details_callback(@model)
+    else
+      """
+        <note>#{@location().toString()}</note>
+      """

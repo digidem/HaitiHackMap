@@ -45,7 +45,11 @@
     };
 
     MarkerView.prototype.details = function() {
-      return "<note>" + (this.location().toString()) + "</note>";
+      if (window.details_callback) {
+        return window.details_callback(this.model);
+      } else {
+        return "<note>" + (this.location().toString()) + "</note>";
+      }
     };
 
     return MarkerView;
