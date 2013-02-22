@@ -11,51 +11,62 @@
       this.details = __bind(this.details, this);
 
       this.title = __bind(this.title, this);
+
+      this.location = __bind(this.location, this);
+
+      this.classes = __bind(this.classes, this);
+
+      this.display = __bind(this.display, this);
       return MarkerView.__super__.constructor.apply(this, arguments);
     }
 
+    MarkerView.titleRenderer = null;
+
     MarkerView.detailsRenderer = null;
 
-    MarkerView.prototype.initialize = function(options) {
-      this.type = options.type;
-      this.map = App.map.map;
-      this.display();
-      return this;
+    MarkerView.extractLocation = null;
+
+    MarkerView.prototype.display = function(options) {
+      var classes, icon;
+      if (options == null) {
+        options = {};
+      }
+      classes = "" + (this.model.get("category_name")) + " custom-icon";
+      icon = L.divIcon({
+        className: classes
+      });
+      options.icon = icon;
+      return MarkerView.__super__.display.call(this, options);
     };
 
-    MarkerView.prototype.display = function() {
-      var classes, icon, m, options;
-      options = {};
-      if (this.type !== "default") {
-        classes = "" + (this.model.get("category")) + " custom-icon";
-        icon = L.divIcon({
-          className: classes
-        });
-        options.icon = icon;
-      }
-      m = L.marker(this.location(), options);
-      m.bindPopup("" + (this.title()) + (this.details()));
-      return m.addTo(this.map);
-    };
+    MarkerView.prototype.classes = function() {};
 
     MarkerView.prototype.location = function() {
-      return [this.model.get("lat"), this.model.get("lon")];
+      if (App.Views.MarkerView.extractLocation) {
+        return App.Views.MarkerView.extractLocation(this.model);
+      } else {
+        return MarkerView.__super__.location.call(this);
+      }
     };
 
     MarkerView.prototype.title = function() {
-      return "<h6>" + (this.model.get('display_name')) + "</h6>";
+      if (App.Views.MarkerView.titleRenderer) {
+        return App.Views.MarkerView.titleRenderer(this.model);
+      } else {
+        return MarkerView.__super__.title.call(this);
+      }
     };
 
     MarkerView.prototype.details = function() {
       if (App.Views.MarkerView.detailsRenderer) {
         return App.Views.MarkerView.detailsRenderer(this.model);
       } else {
-        return "<note>" + (this.location().toString()) + "</note>";
+        return MarkerView.__super__.details.call(this);
       }
     };
 
     return MarkerView;
 
-  })(Backbone.View);
+  })(App.Views.DefaultMarkerView);
 
 }).call(this);

@@ -31,7 +31,17 @@
     <script src="scripts/plugins.js"></script>
 
     <script>
-      new HaitiHackMap();
+      var options = {
+        leafletImagesPath: "images",
+
+        categoriesUrl: "scripts/categories.json",
+        resultsUrl: "scripts/results.json",
+
+        titleRenderer: function(model) { return '<h6>' + "Hello, world!" + '</h6>' },
+        detailsRenderer: function(model) { return '<note>' + model.get('category') + '</note>'},
+        extractLocation: function(model) { return [model.get('lat'), model.get('lon')] }
+      }
+      new HaitiHackMap(options);
     </script>
 </body>
 </html>
