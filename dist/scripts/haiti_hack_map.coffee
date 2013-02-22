@@ -20,8 +20,8 @@ class HaitiHackMap
     @run()
 
   setup: =>
-    L.Icon.Default.imagePath = "images"
-    App.Views.MarkerView.detailsRenderer = @options.markerDetailsText
+    L.Icon.Default.imagePath = @options.leafletImagesPath || "images"
+    App.Views.MarkerView.detailsRenderer = @options.detailsRenderer
     App.Collections.Pois.resultsUrl = @options.resultsUrl
 
   run: =>

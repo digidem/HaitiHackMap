@@ -18,8 +18,8 @@
     }
 
     HaitiHackMap.prototype.setup = function() {
-      L.Icon.Default.imagePath = "images";
-      App.Views.MarkerView.detailsRenderer = this.options.markerDetailsText;
+      L.Icon.Default.imagePath = this.options.leafletImagesPath || "images";
+      App.Views.MarkerView.detailsRenderer = this.options.detailsRenderer;
       return App.Collections.Pois.resultsUrl = this.options.resultsUrl;
     };
 
