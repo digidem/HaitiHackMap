@@ -64,16 +64,11 @@
     <script src="scripts/views/marker_view.js"></script>
     <script src="scripts/routers/app_router.js"></script>
     <script src="scripts/initialize.js"></script>
+    <script src="scripts/haiti_hack_map.js"></script>
     <!-- endbuild -->
 
     <script>
-      window.details_callback = function(model) {
-        console.log(model);
-        var str = "<note>" + model.get("category") + "</note>";
-        return str;
-      };
-      L.Icon.Default.imagePath = "images";
-      new window.App.Router();
+      new HaitiHackMap();
     </script>
 </body>
 </html>

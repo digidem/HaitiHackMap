@@ -1,6 +1,7 @@
 class App.Views.MarkerView extends Backbone.View
+  @detailsRenderer: null
+
   initialize: (options) ->
-    #{@map} = options
     {@type} = options
     @map = App.map.map
     @display()
@@ -26,8 +27,8 @@ class App.Views.MarkerView extends Backbone.View
     """
 
   details: =>
-    if window.details_callback
-      window.details_callback(@model)
+    if App.Views.MarkerView.detailsRenderer
+      App.Views.MarkerView.detailsRenderer @model
     else
       """
         <note>#{@location().toString()}</note>
