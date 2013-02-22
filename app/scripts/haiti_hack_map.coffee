@@ -23,6 +23,7 @@ class HaitiHackMap
     L.Icon.Default.imagePath = @options.leafletImagesPath || "images"
     App.Views.MarkerView.detailsRenderer = @options.detailsRenderer
     App.Collections.Pois.resultsUrl = @options.resultsUrl
+    App.Collections.Categories.categoriesUrl = @options.categoriesUrl
 
   run: =>
     console.log "Running"
