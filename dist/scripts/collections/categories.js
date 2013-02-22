@@ -13,8 +13,8 @@
     Categories.prototype.model = App.Models.Category;
 
     Categories.prototype.url = function() {
-      if (window.categories_url) {
-        return window.categories_url;
+      if (App.Collections.Categories.categoriesUrl) {
+        return App.Collections.Categories.categoriesUrl;
       } else {
         return "scripts/categories.json";
       }

@@ -20,7 +20,8 @@
     HaitiHackMap.prototype.setup = function() {
       L.Icon.Default.imagePath = this.options.leafletImagesPath || "images";
       App.Views.MarkerView.detailsRenderer = this.options.detailsRenderer;
-      return App.Collections.Pois.resultsUrl = this.options.resultsUrl;
+      App.Collections.Pois.resultsUrl = this.options.resultsUrl;
+      return App.Collections.Categories.categoriesUrl = this.options.categoriesUrl;
     };
 
     HaitiHackMap.prototype.run = function() {

@@ -2,8 +2,8 @@ class App.Collections.Categories extends Backbone.Collection
   model: App.Models.Category
   #TODO
   url: ->
-    if window.categories_url
-      window.categories_url
+    if App.Collections.Categories.categoriesUrl
+      App.Collections.Categories.categoriesUrl
     else
       "scripts/categories.json"
 
