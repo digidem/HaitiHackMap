@@ -12,12 +12,10 @@
       return Pois.__super__.constructor.apply(this, arguments);
     }
 
-    Pois.resultsUrl = null;
-
     Pois.prototype.model = App.Models.Poi;
 
     Pois.prototype.url = function() {
-      return App.Collections.Pois.resultsUrl || "scripts/results.json";
+      return App.options.resultsUrl || "scripts/results.json";
     };
 
     Pois.prototype.initialize = function() {

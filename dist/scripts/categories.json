@@ -1,7 +1,7 @@
 [
   { "id": 1, "category_name": "Health Facility" },
   { "id": 2, "category_name": "Organisation" },
-  { "id": 3, "category_name": "Justice" },
+  { "id": 3, "category_name": "Legal" },
   { "id": 4, "category_name": "Police" },
   { "id": 5, "category_name": "Church" }
 ]

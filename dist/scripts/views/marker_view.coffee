@@ -1,8 +1,4 @@
 class App.Views.MarkerView extends App.Views.DefaultMarkerView
-  @titleRenderer: null
-  @detailsRenderer: null
-  @extractLocation: null
-
   display: (options = {}) =>
     classes = "#{@model.get("category_name")} custom-icon"
     icon = L.divIcon(className: classes)
@@ -12,19 +8,30 @@ class App.Views.MarkerView extends App.Views.DefaultMarkerView
   classes: =>
 
   location: =>
-    if App.Views.MarkerView.extractLocation
-      App.Views.MarkerView.extractLocation @model
+    if App.options.extractLocation
+      App.options.extractLocation @model
     else
       super()
 
   title: =>
-    if App.Views.MarkerView.titleRenderer
-      App.Views.MarkerView.titleRenderer @model
+    if App.options.titleTemplate
+      @useTemplate App.options.titleTemplate
+    else if App.options.titleRenderer
+      @useFunction App.options.titleRenderer
     else
       super()
 
   details: =>
-    if App.Views.MarkerView.detailsRenderer
-      App.Views.MarkerView.detailsRenderer @model
+    if App.options.detailsTemplate
+      @useTemplate App.options.detailsTemplate
+    else if App.options.detailsRenderer
+      @useFunction App.options.detailsRenderer
     else
       super()
+
+  useTemplate: (template) =>
+    compiled = _.template template
+    compiled @model.attributes
+
+  useFunction: (func) =>
+    func @model
