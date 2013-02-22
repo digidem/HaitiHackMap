@@ -76,7 +76,7 @@
         resultsUrl: "scripts/results.json",
 
         titleRenderer: function(model) { return '<h6>' + "Hello, world!" + '</h6>' },
-        detailsRenderer: function(model) { return '<note>' + model.get('category') + '</note>'},
+        detailsRenderer: function(model) { return '<note>' + model.get('category_name') + '</note>'},
         extractLocation: function(model) { return [model.get('lat'), model.get('lon')] }
       }
       new HaitiHackMap(options);
