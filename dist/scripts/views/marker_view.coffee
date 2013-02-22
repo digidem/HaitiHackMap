@@ -1,35 +1,30 @@
-class App.Views.MarkerView extends Backbone.View
+class App.Views.MarkerView extends App.Views.DefaultMarkerView
+  @titleRenderer: null
   @detailsRenderer: null
+  @extractLocation: null
 
-  initialize: (options) ->
-    {@type} = options
-    @map = App.map.map
-    @display()
-    @
+  display: (options = {}) =>
+    classes = "#{@model.get("category_name")} custom-icon"
+    icon = L.divIcon(className: classes)
+    options.icon = icon
+    super(options)
 
-  display: ->
-    options = {}
-    unless @type == "default"
-      classes = "#{@model.get("category")} custom-icon"
-      icon = L.divIcon(className: classes)
-      options.icon = icon
+  classes: =>
 
-    m = L.marker(@location(), options)
-    m.bindPopup("#{@title()}#{@details()}")
-    m.addTo(@map)
-
-  location: ->
-    [@model.get("lat"), @model.get("lon")]
+  location: =>
+    if App.Views.MarkerView.extractLocation
+      App.Views.MarkerView.extractLocation @model
+    else
+      super()
 
   title: =>
-    """
-    <h6>#{@model.get('display_name')}</h6>
-    """
+    if App.Views.MarkerView.titleRenderer
+      App.Views.MarkerView.titleRenderer @model
+    else
+      super()
 
   details: =>
     if App.Views.MarkerView.detailsRenderer
       App.Views.MarkerView.detailsRenderer @model
     else
-      """
-        <note>#{@location().toString()}</note>
-      """
+      super()

@@ -22,12 +22,12 @@ class HaitiHackMap
   setup: =>
     L.Icon.Default.imagePath = @options.leafletImagesPath || "images"
     App.Views.MarkerView.detailsRenderer = @options.detailsRenderer
+    App.Views.MarkerView.titleRenderer = @options.titleRenderer
+    App.Views.MarkerView.extractLocation = @options.extractLocation
     App.Collections.Pois.resultsUrl = @options.resultsUrl
     App.Collections.Categories.categoriesUrl = @options.categoriesUrl
 
   run: =>
-    console.log "Running"
     new App.Router()
-
 
 window.HaitiHackMap = HaitiHackMap

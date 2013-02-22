@@ -46,10 +46,9 @@
 
     MapView.prototype.resultSelected = function(model) {
       var marker;
-      marker = new App.Views.MarkerView({
+      marker = new App.Views.DefaultMarkerView({
         model: model,
-        map: this.map,
-        type: "default"
+        map: this.map
       });
       return this.map.panTo(marker.location());
     };

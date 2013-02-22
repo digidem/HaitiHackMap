@@ -22,7 +22,9 @@ class App.Views.MapView extends Backbone.View
     @map.addLayer(tiles)
 
   resultSelected: (model) ->
-    marker = new App.Views.MarkerView(model: model, map: @map, type: "default")
+    marker = new App.Views.DefaultMarkerView
+      model: model
+      map: @map
     @map.panTo(marker.location())
 
   tilesUrlPattern: ->
