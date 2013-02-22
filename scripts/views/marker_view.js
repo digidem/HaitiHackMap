@@ -14,6 +14,8 @@
       return MarkerView.__super__.constructor.apply(this, arguments);
     }
 
+    MarkerView.detailsRenderer = null;
+
     MarkerView.prototype.initialize = function(options) {
       this.type = options.type;
       this.map = App.map.map;
@@ -45,8 +47,8 @@
     };
 
     MarkerView.prototype.details = function() {
-      if (window.details_callback) {
-        return window.details_callback(this.model);
+      if (App.Views.MarkerView.detailsRenderer) {
+        return App.Views.MarkerView.detailsRenderer(this.model);
       } else {
         return "<note>" + (this.location().toString()) + "</note>";
       }

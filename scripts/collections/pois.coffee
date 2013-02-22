@@ -1,10 +1,9 @@
 class App.Collections.Pois extends Backbone.Collection
+  @resultsUrl: null
   model: App.Models.Poi
+
   url: ->
-    if window.results_url
-      window.results_url
-    else
-      "scripts/results.json"
+    App.Collections.Pois.resultsUrl || "scripts/results.json"
 
   initialize: ->
     _.defer(@grab)
