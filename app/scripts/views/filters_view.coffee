@@ -18,8 +18,8 @@ class App.Views.FiltersView extends Backbone.View
         <label class='#{name}'>
           <input type='checkbox' checked='checked' />
           #{name}
-          <span class='box'></span>
-            </label>
+          <span class='category_box'></span>
+        </label>
       </li>
       """
     )
