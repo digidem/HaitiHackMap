@@ -1,8 +1,22 @@
-# HaitiHack
+# HaitiHackMap
 
-HaitiHack is an effort to help women from KOFAVIV in Haiti. This effort took place on
-1/31/2013-2/4/2013 in Port au Prince, with an amazing team including locals and international
-participants.
+## Usage
 
-This repo has the front-end aspect of the project. Not very many details are shared here.
-That's by design.
+```javascript
+var options = {}
+new HaitiHackMap(options);
+```
+
+## Options
+
+Currently, the following options are supported:
+
+### resultsUrl
+
+A string containing the URL from which to get the POI results to be rendered in
+the map.
+
+### detailsRenderer
+
+A function that takes a backbone model (from the JSON returned from resultsUrl)
+and returns an HTML string.
