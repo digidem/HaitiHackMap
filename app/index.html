@@ -61,6 +61,7 @@
     <script src="scripts/views/map_view.js"></script>
     <script src="scripts/views/osm_result_view.js"></script>
     <script src="scripts/views/markers_view.js"></script>
+    <script src="scripts/views/default_marker_view.js"></script>
     <script src="scripts/views/marker_view.js"></script>
     <script src="scripts/routers/app_router.js"></script>
     <script src="scripts/initialize.js"></script>
@@ -68,7 +69,17 @@
     <!-- endbuild -->
 
     <script>
-      new HaitiHackMap();
+      var options = {
+        leafletImagesPath: "images",
+
+        categoriesUrl: "scripts/categories.json",
+        resultsUrl: "scripts/results.json",
+
+        titleRenderer: function(model) { return '<h6>' + "Hello, world!" + '</h6>' },
+        detailsRenderer: function(model) { return '<note>' + model.get('category') + '</note>'},
+        extractLocation: function(model) { return [model.get('lat'), model.get('lon')] }
+      }
+      new HaitiHackMap(options);
     </script>
 </body>
 </html>
