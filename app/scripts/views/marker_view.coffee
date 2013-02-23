@@ -1,11 +1,11 @@
 class App.Views.MarkerView extends App.Views.DefaultMarkerView
   display: (options = {}) =>
-    classes = "#{@model.get("category_name")} custom-icon"
-    icon = L.divIcon(className: classes)
+    icon = L.divIcon(className: @classes())
     options.icon = icon
     super(options)
 
   classes: =>
+    "#{@model.get("category_name")} custom-icon"
 
   location: =>
     if App.options.extractLocation
