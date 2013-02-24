@@ -28,14 +28,21 @@
         map: App.map.map
       });
       this.$el.append(App.search.el).append(App.map.el);
-      return this.addAside();
+      this.addAside();
+      return this.addScrollToTop();
     };
 
     Router.prototype.addAside = function() {
       var aside;
-      aside = $("<aside></aside>");
+      aside = $("<aside></aside>").addClass('clearfix');
       aside.append(App.filters.el);
-      return this.$el.append(aside);
+      return this.$el.prepend(aside);
+    };
+
+    Router.prototype.addScrollToTop = function() {
+      var scrollToTop;
+      scrollToTop = new App.Views.ScrollToTopView();
+      return $(App.map.el).append(scrollToTop.el);
     };
 
     Router.prototype["default"] = function() {

@@ -33,7 +33,6 @@
     };
 
     DefaultMarkerView.prototype.location = function() {
-      console.log(this.model);
       return [this.model.get("lat"), this.model.get("lon")];
     };
 
