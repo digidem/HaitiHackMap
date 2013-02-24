@@ -14,9 +14,9 @@ class App.Views.MarkersView extends Backbone.View
 
   changeMarkers: =>
     @children.each (child) =>
-      categories = child.model.get('categories')
+      category_names = child.model.get('category_names')
 
-      if App.filters.hasCategorySelected(categories)
+      if App.filters.hasCategorySelected(category_names)
         child.show()
       else
         child.hide()
