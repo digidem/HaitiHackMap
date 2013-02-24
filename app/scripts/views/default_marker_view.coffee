@@ -18,5 +18,8 @@ class App.Views.DefaultMarkerView extends Backbone.View
       <note>#{@location().toString()}</note>
     """
 
+  hide: =>
+    @map.removeLayer @marker
+
   show: =>
     @map.addLayer @marker
