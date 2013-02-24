@@ -16,7 +16,8 @@ class App.Views.FiltersView extends Backbone.View
       """
       <li>
         <label class='#{name}'>
-          <input type='checkbox' checked='checked' />
+          <input type='checkbox' name="category"
+            value="#{name}" checked='checked' />
           #{name}
           <span class='category_box'></span>
         </label>
@@ -25,4 +26,7 @@ class App.Views.FiltersView extends Backbone.View
     )
 
   handleClick: =>
-    @collection.filter()
+    App.markersView.trigger 'filter'
+
+  isCategorySelected: (category_name) =>
+    @$el.find("input[value='#{category_name}']").prop('checked')

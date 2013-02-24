@@ -1,13 +1,13 @@
 class App.Views.DefaultMarkerView extends Backbone.View
   initialize: ->
     @map = App.map.map
-    @display()
+    @loadMarker()
+    @show()
     @
 
-  display: (options = {}) =>
-    m = L.marker(@location(), options)
-    m.bindPopup(@popupContents())
-    m.addTo(@map)
+  loadMarker: (options = {}) =>
+    @marker = L.marker(@location(), options)
+    @marker.bindPopup(@popupContents())
 
   location: =>
     [@model.get("lat"), @model.get("lon")]
@@ -17,3 +17,9 @@ class App.Views.DefaultMarkerView extends Backbone.View
       <h6>#{@model.get('display_name')}</h6>
       <note>#{@location().toString()}</note>
     """
+
+  hide: =>
+    @map.removeLayer @marker
+
+  show: =>
+    @map.addLayer @marker

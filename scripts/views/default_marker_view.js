@@ -8,28 +8,31 @@
     __extends(DefaultMarkerView, _super);
 
     function DefaultMarkerView() {
+      this.show = __bind(this.show, this);
+
+      this.hide = __bind(this.hide, this);
+
       this.popupContents = __bind(this.popupContents, this);
 
       this.location = __bind(this.location, this);
 
-      this.display = __bind(this.display, this);
+      this.loadMarker = __bind(this.loadMarker, this);
       return DefaultMarkerView.__super__.constructor.apply(this, arguments);
     }
 
     DefaultMarkerView.prototype.initialize = function() {
       this.map = App.map.map;
-      this.display();
+      this.loadMarker();
+      this.show();
       return this;
     };
 
-    DefaultMarkerView.prototype.display = function(options) {
-      var m;
+    DefaultMarkerView.prototype.loadMarker = function(options) {
       if (options == null) {
         options = {};
       }
-      m = L.marker(this.location(), options);
-      m.bindPopup(this.popupContents());
-      return m.addTo(this.map);
+      this.marker = L.marker(this.location(), options);
+      return this.marker.bindPopup(this.popupContents());
     };
 
     DefaultMarkerView.prototype.location = function() {
@@ -38,6 +41,14 @@
 
     DefaultMarkerView.prototype.popupContents = function() {
       return "<h6>" + (this.model.get('display_name')) + "</h6>\n<note>" + (this.location().toString()) + "</note>";
+    };
+
+    DefaultMarkerView.prototype.hide = function() {
+      return this.map.removeLayer(this.marker);
+    };
+
+    DefaultMarkerView.prototype.show = function() {
+      return this.map.addLayer(this.marker);
     };
 
     return DefaultMarkerView;

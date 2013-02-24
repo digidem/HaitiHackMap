@@ -8,6 +8,8 @@
     __extends(FiltersView, _super);
 
     function FiltersView() {
+      this.isCategorySelected = __bind(this.isCategorySelected, this);
+
       this.handleClick = __bind(this.handleClick, this);
       return FiltersView.__super__.constructor.apply(this, arguments);
     }
@@ -30,12 +32,16 @@
       return this.$el.html(this.collection.map(function(model) {
         var name;
         name = model.get('category_name');
-        return "<li>\n  <label class='" + name + "'>\n    <input type='checkbox' checked='checked' />\n    " + name + "\n    <span class='category_box'></span>\n  </label>\n</li>";
+        return "<li>\n  <label class='" + name + "'>\n    <input type='checkbox' name=\"category\"\n      value=\"" + name + "\" checked='checked' />\n    " + name + "\n    <span class='category_box'></span>\n  </label>\n</li>";
       }));
     };
 
     FiltersView.prototype.handleClick = function() {
-      return this.collection.filter();
+      return App.markersView.trigger('filter');
+    };
+
+    FiltersView.prototype.isCategorySelected = function(category_name) {
+      return this.$el.find("input[value='" + category_name + "']").prop('checked');
     };
 
     return FiltersView;

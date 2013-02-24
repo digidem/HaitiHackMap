@@ -8,6 +8,8 @@
     __extends(MarkersView, _super);
 
     function MarkersView() {
+      this.changeMarkers = __bind(this.changeMarkers, this);
+
       this.addMarkers = __bind(this.addMarkers, this);
       return MarkersView.__super__.constructor.apply(this, arguments);
     }
@@ -16,6 +18,7 @@
       this.map = options.map;
       this.children = _([]);
       this.listenTo(this.collection, 'reset', this.addMarkers);
+      this.on('filter', this.changeMarkers);
       return this;
     };
 
@@ -26,6 +29,19 @@
           model: model,
           map: _this.map
         }));
+      });
+    };
+
+    MarkersView.prototype.changeMarkers = function() {
+      var _this = this;
+      return this.children.each(function(child) {
+        var cat;
+        cat = child.model.get('category_name');
+        if (App.filters.isCategorySelected(cat)) {
+          return child.show();
+        } else {
+          return child.hide();
+        }
       });
     };
 

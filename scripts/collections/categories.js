@@ -25,8 +25,6 @@
       return this;
     };
 
-    Categories.prototype.filter = function() {};
-
     return Categories;
 
   })(Backbone.Collection);
