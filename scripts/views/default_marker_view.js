@@ -8,9 +8,7 @@
     __extends(DefaultMarkerView, _super);
 
     function DefaultMarkerView() {
-      this.details = __bind(this.details, this);
-
-      this.title = __bind(this.title, this);
+      this.popupContents = __bind(this.popupContents, this);
 
       this.location = __bind(this.location, this);
 
@@ -30,7 +28,7 @@
         options = {};
       }
       m = L.marker(this.location(), options);
-      m.bindPopup("" + (this.title()) + (this.details()));
+      m.bindPopup(this.popupContents());
       return m.addTo(this.map);
     };
 
@@ -39,12 +37,8 @@
       return [this.model.get("lat"), this.model.get("lon")];
     };
 
-    DefaultMarkerView.prototype.title = function() {
-      return "<h6>" + (this.model.get('display_name')) + "</h6>";
-    };
-
-    DefaultMarkerView.prototype.details = function() {
-      return "<note>" + (this.location().toString()) + "</note>";
+    DefaultMarkerView.prototype.popupContents = function() {
+      return "<h6>" + (this.model.get('display_name')) + "</h6>\n<note>" + (this.location().toString()) + "</note>";
     };
 
     return DefaultMarkerView;

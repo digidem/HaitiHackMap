@@ -6,19 +6,15 @@ class App.Views.DefaultMarkerView extends Backbone.View
 
   display: (options = {}) =>
     m = L.marker(@location(), options)
-    m.bindPopup("#{@title()}#{@details()}")
+    m.bindPopup(@popupContents())
     m.addTo(@map)
 
   location: =>
     console.log @model
     [@model.get("lat"), @model.get("lon")]
 
-  title: =>
+  popupContents: =>
     """
       <h6>#{@model.get('display_name')}</h6>
-    """
-
-  details: =>
-    """
       <note>#{@location().toString()}</note>
     """
