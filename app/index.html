@@ -47,20 +47,12 @@
     <script src="scripts/haiti_hack_map.js"></script>
     <!-- endbuild -->
 
+    <div id="BLAH">
+      <h1>Hello, world!?</h1>
+    </div>
+
     <script>
-      var options = {
-        leafletImagesPath: "images",
-
-        categoriesUrl: "scripts/categories.json",
-        resultsUrl: "scripts/results.json",
-
-        popupContentsRenderer: function(model) {
-          return '<h6>' + "Hello, world!" + '</h6>' +
-          '<note>' + model.get('category_name') + '</note>'
-        },
-        extractLocation: function(model) { return [model.get('lat'), model.get('lon')] }
-      }
-      new HaitiHackMap(options);
+      new HaitiHackMap();
     </script>
 </body>
 </html>
