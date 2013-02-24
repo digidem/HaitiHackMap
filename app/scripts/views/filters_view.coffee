@@ -29,4 +29,13 @@ class App.Views.FiltersView extends Backbone.View
     App.markersView.trigger 'filter'
 
   isCategorySelected: (category_name) =>
-    @$el.find("input[value='#{category_name}']").prop('checked')
+    !!@$el.find("input[value='#{category_name}']").prop('checked')
+
+  hasCategorySelected: (categories) ->
+    selected = false
+    ary = categories.split(', ')
+    $(ary).each (i, category) =>
+      if @isCategorySelected(category)
+        selected = true
+
+    return selected
