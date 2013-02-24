@@ -10,7 +10,6 @@ class App.Views.DefaultMarkerView extends Backbone.View
     m.addTo(@map)
 
   location: =>
-    console.log @model
     [@model.get("lat"), @model.get("lon")]
 
   popupContents: =>
