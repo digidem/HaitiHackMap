@@ -18,9 +18,9 @@ class App.Router extends Backbone.Router
     @addScrollToTop()
 
   addAside: ->
-    aside = $("<aside></aside>")
+    aside = $("<aside></aside>").addClass('clearfix')
     aside.append(App.filters.el)
-    @$el.append(aside)
+    @$el.prepend(aside)
 
   addScrollToTop: ->
     scrollToTop = new App.Views.ScrollToTopView()
