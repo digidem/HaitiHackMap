@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-# Time: Sat Feb 23 2013 19:13:01 GMT-0500 (EST)
+# Time: Sun Feb 24 2013 15:15:55 GMT-0500 (EST)
 # This manifest was created by confess.js, http://github.com/jamesgpearce/confess
 #
 # Retrieved URL: http://localhost:3501/
@@ -21,15 +21,13 @@ CACHE MANIFEST
 #  configFile: /usr/local/share/npm/lib/node_modules/yeoman/lib/support/confess.json
 
 CACHE:
-http://a.tile.osm.org/14/4899/7332.png
 http://a.tile.osm.org/14/4900/7334.png
 http://a.tile.osm.org/14/4901/7333.png
+http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js
 http://b.tile.osm.org/14/4899/7333.png
-http://b.tile.osm.org/14/4900/7332.png
 http://b.tile.osm.org/14/4901/7334.png
 http://c.tile.osm.org/14/4899/7334.png
 http://c.tile.osm.org/14/4900/7333.png
-http://c.tile.osm.org/14/4901/7332.png
 http://localhost:3501/app/images/glyphicons-halflings-white.png?1361501073
 http://localhost:3501/app/images/glyphicons-halflings.png?1361501073
 http://localhost:3501/images/categories/icons/church.png
@@ -45,11 +43,8 @@ http://localhost:3501/images/categories/markers-symbols-white-bg/police.png
 http://localhost:3501/images/categories/markers-symbols-white-bg/women.png
 http://localhost:3501/images/loader.gif
 http://localhost:3501/styles/images/layers.png
-scripts/plugins.js
-scripts/vendor/jquery.min.js
-scripts/vendor/modernizr.min.js
-styles/leaflet.css
-styles/main.css
+scripts/haiti_hack_map.js
+styles/haiti_hack_map.css
 
 NETWORK:
 *

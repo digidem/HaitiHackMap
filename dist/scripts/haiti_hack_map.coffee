@@ -15,18 +15,39 @@ class HaitiHackMap
   #          detailsRenderer: A function that takes an object with the
   #                           representation gotten from resultsUrl.
   constructor: (options = {}) ->
-    @options = options
-    @setup()
+    @setup(options)
     @run()
 
-  setup: =>
-    L.Icon.Default.imagePath = @options.leafletImagesPath || "images"
+  setup: (options) =>
+    @setOptions(options)
+    @addElements()
+    L.Icon.Default.imagePath = options.imagesPath || "images"
+
+  setOptions: (options) =>
     App.options =
-      categoriesUrl: @options.categoriesUrl
-      extractLocation: @options.extractLocation
-      popupContentsRenderer: @options.popupContentsRenderer
-      popupContentsTemplate: @options.popupContentsTemplate
-      resultsUrl: @options.resultsUrl
+      categoriesUrl: options.categoriesUrl
+      extractLocation: options.extractLocation
+      popupContentsRenderer: options.popupContentsRenderer
+      popupContentsTemplate: options.popupContentsTemplate
+      resultsUrl: options.resultsUrl
+      appUrl: options.appUrl
+
+  addElements: ->
+    $('body').append($('<div/>').attr('id', 'app'))
+
+    stylesheetPath = "styles/haiti_hack_map.css"
+    stylesheetUrl = ""
+
+    if App.options.appUrl
+      stylesheetUrl = "#{App.options.appUrl}/#{stylesheetPath}"
+    else
+      stylesheetUrl = stylesheetPath
+
+    stylesheet = $('<link/>').attr
+      'rel': 'stylesheet'
+      'href': stylesheetUrl
+
+    $('head').append(stylesheet)
 
   run: ->
     new App.Router()
