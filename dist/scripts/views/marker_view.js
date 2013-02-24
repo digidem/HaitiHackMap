@@ -18,11 +18,11 @@
 
       this.classes = __bind(this.classes, this);
 
-      this.display = __bind(this.display, this);
+      this.loadMarker = __bind(this.loadMarker, this);
       return MarkerView.__super__.constructor.apply(this, arguments);
     }
 
-    MarkerView.prototype.display = function(options) {
+    MarkerView.prototype.loadMarker = function(options) {
       var icon;
       if (options == null) {
         options = {};
@@ -31,7 +31,7 @@
         className: this.classes()
       });
       options.icon = icon;
-      return MarkerView.__super__.display.call(this, options);
+      return MarkerView.__super__.loadMarker.call(this, options);
     };
 
     MarkerView.prototype.classes = function() {

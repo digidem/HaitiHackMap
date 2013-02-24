@@ -11,5 +11,3 @@ class App.Collections.Categories extends Backbone.Collection
   initialize: ->
     @fetch()
     @
-
-  filter: ->

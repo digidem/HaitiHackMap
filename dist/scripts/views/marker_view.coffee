@@ -1,5 +1,5 @@
 class App.Views.MarkerView extends App.Views.DefaultMarkerView
-  display: (options = {}) =>
+  loadMarker: (options = {}) =>
     icon = L.divIcon(className: @classes())
     options.icon = icon
     super(options)
