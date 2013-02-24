@@ -23,13 +23,10 @@ class HaitiHackMap
     L.Icon.Default.imagePath = @options.leafletImagesPath || "images"
     App.options =
       categoriesUrl: @options.categoriesUrl
-      detailsRenderer: @options.detailsRenderer
       extractLocation: @options.extractLocation
+      popupContentsRenderer: @options.popupContentsRenderer
+      popupContentsTemplate: @options.popupContentsTemplate
       resultsUrl: @options.resultsUrl
-      titleRenderer: @options.titleRenderer
-
-      titleTemplate: @options.titleTemplate
-      detailsTemplate: @options.detailsTemplate
 
   run: ->
     new App.Router()

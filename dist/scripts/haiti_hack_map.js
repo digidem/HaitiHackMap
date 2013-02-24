@@ -19,12 +19,10 @@
       L.Icon.Default.imagePath = this.options.leafletImagesPath || "images";
       return App.options = {
         categoriesUrl: this.options.categoriesUrl,
-        detailsRenderer: this.options.detailsRenderer,
         extractLocation: this.options.extractLocation,
-        resultsUrl: this.options.resultsUrl,
-        titleRenderer: this.options.titleRenderer,
-        titleTemplate: this.options.titleTemplate,
-        detailsTemplate: this.options.detailsTemplate
+        popupContentsRenderer: this.options.popupContentsRenderer,
+        popupContentsTemplate: this.options.popupContentsTemplate,
+        resultsUrl: this.options.resultsUrl
       };
     };
 

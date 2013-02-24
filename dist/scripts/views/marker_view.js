@@ -12,9 +12,7 @@
 
       this.useTemplate = __bind(this.useTemplate, this);
 
-      this.details = __bind(this.details, this);
-
-      this.title = __bind(this.title, this);
+      this.popupContents = __bind(this.popupContents, this);
 
       this.location = __bind(this.location, this);
 
@@ -25,19 +23,20 @@
     }
 
     MarkerView.prototype.display = function(options) {
-      var classes, icon;
+      var icon;
       if (options == null) {
         options = {};
       }
-      classes = "" + (this.model.get("category_name")) + " custom-icon";
       icon = L.divIcon({
-        className: classes
+        className: this.classes()
       });
       options.icon = icon;
       return MarkerView.__super__.display.call(this, options);
     };
 
-    MarkerView.prototype.classes = function() {};
+    MarkerView.prototype.classes = function() {
+      return "" + (this.model.get("category_name")) + " custom-icon";
+    };
 
     MarkerView.prototype.location = function() {
       if (App.options.extractLocation) {
@@ -47,23 +46,13 @@
       }
     };
 
-    MarkerView.prototype.title = function() {
-      if (App.options.titleTemplate) {
-        return this.useTemplate(App.options.titleTemplate);
-      } else if (App.options.titleRenderer) {
-        return this.useFunction(App.options.titleRenderer);
+    MarkerView.prototype.popupContents = function() {
+      if (App.options.popupContentsTemplate) {
+        return this.useTemplate(App.options.popupContentsTemplate);
+      } else if (App.options.popupContentsRenderer) {
+        return this.useFunction(App.options.popupContentsRenderer);
       } else {
-        return MarkerView.__super__.title.call(this);
-      }
-    };
-
-    MarkerView.prototype.details = function() {
-      if (App.options.detailsTemplate) {
-        return this.useTemplate(App.options.detailsTemplate);
-      } else if (App.options.detailsRenderer) {
-        return this.useFunction(App.options.detailsRenderer);
-      } else {
-        return MarkerView.__super__.details.call(this);
+        return MarkerView.__super__.popupContents.call(this);
       }
     };
 

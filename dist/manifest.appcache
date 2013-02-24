@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-# Time: Fri Feb 22 2013 14:35:25 GMT-0500 (EST)
+# Time: Sat Feb 23 2013 19:13:01 GMT-0500 (EST)
 # This manifest was created by confess.js, http://github.com/jamesgpearce/confess
 #
 # Retrieved URL: http://localhost:3501/
@@ -38,11 +38,11 @@ http://localhost:3501/images/categories/icons/legal.png
 http://localhost:3501/images/categories/icons/medical.png
 http://localhost:3501/images/categories/icons/police.png
 http://localhost:3501/images/categories/icons/women.png
-http://localhost:3501/images/categories/markers-symbols/church.png
-http://localhost:3501/images/categories/markers-symbols/legal.png
-http://localhost:3501/images/categories/markers-symbols/medical.png
-http://localhost:3501/images/categories/markers-symbols/police.png
-http://localhost:3501/images/categories/markers-symbols/women.png
+http://localhost:3501/images/categories/markers-symbols-white-bg/church.png
+http://localhost:3501/images/categories/markers-symbols-white-bg/legal.png
+http://localhost:3501/images/categories/markers-symbols-white-bg/medical.png
+http://localhost:3501/images/categories/markers-symbols-white-bg/police.png
+http://localhost:3501/images/categories/markers-symbols-white-bg/women.png
 http://localhost:3501/images/loader.gif
 http://localhost:3501/styles/images/layers.png
 scripts/plugins.js
