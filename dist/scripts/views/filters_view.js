@@ -41,7 +41,20 @@
     };
 
     FiltersView.prototype.isCategorySelected = function(category_name) {
-      return this.$el.find("input[value='" + category_name + "']").prop('checked');
+      return !!this.$el.find("input[value='" + category_name + "']").prop('checked');
+    };
+
+    FiltersView.prototype.hasCategorySelected = function(category_names) {
+      var ary, selected,
+        _this = this;
+      selected = false;
+      ary = category_names.split(', ');
+      $(ary).each(function(i, category) {
+        if (_this.isCategorySelected(category)) {
+          return selected = true;
+        }
+      });
+      return selected;
     };
 
     return FiltersView;

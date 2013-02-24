@@ -35,9 +35,9 @@
     MarkersView.prototype.changeMarkers = function() {
       var _this = this;
       return this.children.each(function(child) {
-        var cat;
-        cat = child.model.get('category_name');
-        if (App.filters.isCategorySelected(cat)) {
+        var category_names;
+        category_names = child.model.get('category_names');
+        if (App.filters.hasCategorySelected(category_names)) {
           return child.show();
         } else {
           return child.hide();
