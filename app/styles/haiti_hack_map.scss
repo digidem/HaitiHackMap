@@ -150,3 +150,10 @@ aside {
   right: 15px;
   z-index: 1000;
 }
+
+@media (max-width: 767px) {
+  body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
