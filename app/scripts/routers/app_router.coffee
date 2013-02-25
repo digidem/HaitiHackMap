@@ -13,18 +13,17 @@ class App.Router extends Backbone.Router
       collection: App.pois,
       map: App.map.map
 
-    @$el.append(App.search.el).append(App.map.el)
+    @$el.append(App.search.$el).append(App.map.$el)
     @addAside()
-    @addScrollToTop()
+    @addButtonNav()
 
   addAside: ->
     aside = $("<aside></aside>").addClass('clearfix')
-    aside.append(App.filters.el)
+    aside.append App.filters.el
     @$el.prepend(aside)
 
-  addScrollToTop: ->
-    scrollToTop = new App.Views.ScrollToTopView()
-    $(App.map.el).append(scrollToTop.el)
+  addButtonNav: ->
+    new App.Views.ButtonNavView().$el.appendTo App.map.$el
 
   default: ->
     @
