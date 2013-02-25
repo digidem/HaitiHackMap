@@ -14449,12 +14449,12 @@ a.label:hover, a.badge:hover {
 /* line 64, ../../app/styles/haiti_hack_map.scss */
 .search_form .loader {
   position: absolute;
-  right: 0;
-  top: 0;
   display: none;
-  height: 46px;
-  width: 46px;
   background: url("../images/loader.gif") center center no-repeat;
+  right: 5px;
+  top: 10px;
+  height: 22px;
+  width: 22px;
 }
 /* line 73, ../../app/styles/haiti_hack_map.scss */
 .search_form .loader.loading {
@@ -14564,9 +14564,17 @@ aside .filters input[type="checkbox"] {
 }
 
 /* line 147, ../../app/styles/haiti_hack_map.scss */
-#toTop {
+#scroll {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 15px;
+  right: 15px;
   z-index: 1000;
+}
+
+@media (max-width: 767px) {
+  /* line 155, ../../app/styles/haiti_hack_map.scss */
+  body {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

@@ -27,9 +27,9 @@
         collection: App.pois,
         map: App.map.map
       });
-      this.$el.append(App.search.el).append(App.map.el);
+      this.$el.append(App.search.$el).append(App.map.$el);
       this.addAside();
-      return this.addScrollToTop();
+      return this.addButtonNav();
     };
 
     Router.prototype.addAside = function() {
@@ -39,10 +39,8 @@
       return this.$el.prepend(aside);
     };
 
-    Router.prototype.addScrollToTop = function() {
-      var scrollToTop;
-      scrollToTop = new App.Views.ScrollToTopView();
-      return $(App.map.el).append(scrollToTop.el);
+    Router.prototype.addButtonNav = function() {
+      return new App.Views.ButtonNavView().$el.appendTo(App.map.$el);
     };
 
     Router.prototype["default"] = function() {
