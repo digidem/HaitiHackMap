@@ -63,12 +63,12 @@
   position: relative;
   .loader {
     position: absolute;
-    right: 0;
-    top: 0;
     display: none;
-    height: 46px;
-    width: 46px;
     background: url("../images/loader.gif") center center no-repeat;
+    right: 5px;
+    top: 10px;
+    height: 22px;
+    width: 22px;
 
     &.loading {
       display: inline-block;
