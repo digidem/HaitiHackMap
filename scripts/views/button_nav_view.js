@@ -34,8 +34,11 @@
     };
 
     ButtonNavView.prototype.scroll = function(event) {
-      var target, top;
-      target = $(event.target).data("target");
+      var $target, target, top;
+      $target = $(event.target);
+      $(".active").removeClass("active");
+      $target.addClass("active");
+      target = $target.data("target");
       top = target === null ? 0 : $(target).offset().top;
       return $("html, body").animate({
         scrollTop: top
