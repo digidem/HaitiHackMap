@@ -19,9 +19,7 @@
     ButtonNavView.prototype.done = false;
 
     ButtonNavView.prototype.events = {
-      "click #top": "scrollToTop",
-      "click #map": "scrollToMap",
-      "click #srch": "scrollToSrch"
+      "click": "scroll"
     };
 
     ButtonNavView.prototype.initialize = function() {
@@ -29,31 +27,26 @@
       return this;
     };
 
-    ButtonNavView.prototype.scrollToTop = function(event) {
-      event.stopImmediatePropagation();
-      return $("html, body").animate({
-        scrollTop: 0
-      }, "slow");
-    };
-
-    ButtonNavView.prototype.scrollToMap = function(event) {
-      event.stopImmediatePropagation();
-      return $("html, body").animate({
-        scrollTop: $('#map').offset().top
-      }, "slow");
-    };
-
-    ButtonNavView.prototype.scrollToSrch = function(event) {
-      event.stopImmediatePropagation();
-      return $("html, body").animate({
-        scrollTop: $('#search').offset().top
-      }, "slow");
-    };
-
     ButtonNavView.prototype.render = function() {
-      this.$el.append($('<button/>').text("Top").addClass("btn").attr("id", "top"));
-      this.$el.append($('<button/>').text("Search").addClass("btn").attr("id", "srch"));
-      return this.$el.append($('<button/>').text("Map").addClass("btn").attr("id", "map"));
+      this.$el.append(this.createButton("Top"));
+      this.$el.append(this.createButton("Search", "#search"));
+      return this.$el.append(this.createButton("Map", "#map"));
+    };
+
+    ButtonNavView.prototype.scroll = function(event) {
+      var target, top;
+      target = $(event.target).data("target");
+      top = target === null ? 0 : $(target).offset().top;
+      return $("html, body").animate({
+        scrollTop: top
+      }, "slow");
+    };
+
+    ButtonNavView.prototype.createButton = function(text, target) {
+      if (target == null) {
+        target = null;
+      }
+      return $('<button/>').text(text).addClass("btn").data("target", target);
     };
 
     return ButtonNavView;

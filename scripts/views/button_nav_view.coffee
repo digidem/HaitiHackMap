@@ -6,27 +6,21 @@ class App.Views.ButtonNavView extends Backbone.View
   done: false
 
   events:
-    "click #top": "scrollToTop"
-    "click #map": "scrollToMap"
-    "click #srch": "scrollToSrch"
+    "click": "scroll"
 
   initialize: ->
     @render()
     @
 
-  scrollToTop: (event) ->
-    event.stopImmediatePropagation()
-    $("html, body").animate({ scrollTop: 0 }, "slow")
-
-  scrollToMap: (event) ->
-    event.stopImmediatePropagation()
-    $("html, body").animate({ scrollTop: $('#map').offset().top }, "slow")
-
-  scrollToSrch: (event) ->
-    event.stopImmediatePropagation()
-    $("html, body").animate({ scrollTop: $('#search').offset().top }, "slow")
-
   render: ->
-    @$el.append $('<button/>').text("Top").addClass("btn").attr("id", "top")
-    @$el.append $('<button/>').text("Search").addClass("btn").attr("id", "srch")
-    @$el.append $('<button/>').text("Map").addClass("btn").attr("id", "map")
+    @$el.append @createButton("Top")
+    @$el.append @createButton("Search", "#search")
+    @$el.append @createButton("Map", "#map")
+
+  scroll: (event) ->
+    target = $(event.target).data("target")
+    top = if target == null then 0 else $(target).offset().top
+    $("html, body").animate({ scrollTop: top }, "slow")
+
+  createButton: (text, target = null) ->
+    $('<button/>').text(text).addClass("btn").data("target", target)
