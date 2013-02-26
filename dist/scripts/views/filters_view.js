@@ -19,11 +19,10 @@
     FiltersView.prototype.className = "filters";
 
     FiltersView.prototype.events = {
-      "change input": 'handleClick'
+      "change": 'handleClick'
     };
 
     FiltersView.prototype.initialize = function() {
-      this.render();
       this.listenTo(this.collection, "reset", this.render);
       return this;
     };

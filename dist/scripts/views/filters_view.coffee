@@ -2,10 +2,9 @@ class App.Views.FiltersView extends Backbone.View
   tagName: "ul"
   className: "filters"
   events:
-    "change input": 'handleClick'
+    "change": 'handleClick'
 
   initialize: ->
-    @render()
     @listenTo @collection, "reset", @render
     @
 

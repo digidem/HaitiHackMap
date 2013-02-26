@@ -18,7 +18,10 @@ class App.Views.ButtonNavView extends Backbone.View
     @$el.append @createButton("Map", "#map")
 
   scroll: (event) ->
-    target = $(event.target).data("target")
+    $target = $(event.target)
+    $(".active").removeClass("active")
+    $target.addClass("active")
+    target = $target.data("target")
     top = if target == null then 0 else $(target).offset().top
     $("html, body").animate({ scrollTop: top }, "slow")
 
