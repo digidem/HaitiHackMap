@@ -44,7 +44,7 @@ html {
 
 /* line 49, ../../app/styles/compass_twitter_bootstrap/_reset.scss */
 a:focus {
-  outline: thin dotted #333;
+  outline: thin dotted #333333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -180,7 +180,7 @@ a:hover {
 .img-polaroid {
   padding: 4px;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -894,7 +894,7 @@ pre {
   white-space: pre;
   white-space: pre-wrap;
   background-color: #f5f5f5;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1103,7 +1103,7 @@ input[type="file"] {
 /* line 162, ../../app/styles/compass_twitter_bootstrap/_forms.scss */
 select {
   width: 220px;
-  border: 1px solid #bbb;
+  border: 1px solid #bbbbbb;
   background-color: white;
 }
 
@@ -1118,7 +1118,7 @@ select:focus,
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted #333;
+  outline: thin dotted #333333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -1605,7 +1605,7 @@ select:focus:required:invalid:focus {
   text-align: center;
   text-shadow: 0 1px 0 white;
   background-color: #eeeeee;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
 }
 /* line 443, ../../app/styles/compass_twitter_bootstrap/_forms.scss */
 .input-append .add-on,
@@ -2190,7 +2190,7 @@ table .span24 {
 
 /* line 42, ../../app/styles/compass_twitter_bootstrap/_sprites.scss */
 .icon-glass {
-  background-position: 0      0;
+  background-position: 0 0;
 }
 
 /* line 43, ../../app/styles/compass_twitter_bootstrap/_sprites.scss */
@@ -2938,7 +2938,7 @@ table .span24 {
   margin: 2px 0 0;
   list-style: none;
   background-color: white;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   *border-right-width: 2px;
   *border-bottom-width: 2px;
@@ -3274,7 +3274,7 @@ button.close {
 }
 /* line 43, ../../app/styles/compass_twitter_bootstrap/_buttons.scss */
 .btn:focus {
-  outline: thin dotted #333;
+  outline: thin dotted #333333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -4064,7 +4064,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 104, ../../app/styles/compass_twitter_bootstrap/_navs.scss */
 .nav-tabs {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #dddddd;
 }
 
 /* line 108, ../../app/styles/compass_twitter_bootstrap/_navs.scss */
@@ -4092,7 +4092,7 @@ input[type="submit"].btn.btn-mini {
 .nav-tabs > .active > a:hover {
   color: #555555;
   background-color: white;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   border-bottom-color: transparent;
   cursor: default;
 }
@@ -4132,7 +4132,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 169, ../../app/styles/compass_twitter_bootstrap/_navs.scss */
 .nav-tabs.nav-stacked > li > a {
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -4289,7 +4289,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 298, ../../app/styles/compass_twitter_bootstrap/_navs.scss */
 .tabs-below > .nav-tabs {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #dddddd;
 }
 
 /* line 301, ../../app/styles/compass_twitter_bootstrap/_navs.scss */
@@ -4313,7 +4313,7 @@ input[type="submit"].btn.btn-mini {
 /* line 313, ../../app/styles/compass_twitter_bootstrap/_navs.scss */
 .tabs-below > .nav-tabs > .active > a,
 .tabs-below > .nav-tabs > .active > a:hover {
-  border-color: transparent #ddd #ddd #ddd;
+  border-color: transparent #dddddd #dddddd #dddddd;
 }
 
 /* line 322, ../../app/styles/compass_twitter_bootstrap/_navs.scss */
@@ -4334,7 +4334,7 @@ input[type="submit"].btn.btn-mini {
 .tabs-left > .nav-tabs {
   float: left;
   margin-right: 19px;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid #dddddd;
 }
 
 /* line 338, ../../app/styles/compass_twitter_bootstrap/_navs.scss */
@@ -4353,7 +4353,7 @@ input[type="submit"].btn.btn-mini {
 /* line 346, ../../app/styles/compass_twitter_bootstrap/_navs.scss */
 .tabs-left > .nav-tabs .active > a,
 .tabs-left > .nav-tabs .active > a:hover {
-  border-color: #ddd transparent #ddd #ddd;
+  border-color: #dddddd transparent #dddddd #dddddd;
   *border-right-color: white;
 }
 
@@ -4361,7 +4361,7 @@ input[type="submit"].btn.btn-mini {
 .tabs-right > .nav-tabs {
   float: right;
   margin-left: 19px;
-  border-left: 1px solid #ddd;
+  border-left: 1px solid #dddddd;
 }
 
 /* line 357, ../../app/styles/compass_twitter_bootstrap/_navs.scss */
@@ -4380,7 +4380,7 @@ input[type="submit"].btn.btn-mini {
 /* line 365, ../../app/styles/compass_twitter_bootstrap/_navs.scss */
 .tabs-right > .nav-tabs .active > a,
 .tabs-right > .nav-tabs .active > a:hover {
-  border-color: #ddd #ddd #ddd transparent;
+  border-color: #dddddd #dddddd #dddddd transparent;
   *border-left-color: white;
 }
 
@@ -4740,7 +4740,7 @@ input[type="submit"].btn.btn-mini {
   display: inline-block;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-bottom: 7px solid #ccc;
+  border-bottom: 7px solid #cccccc;
   border-bottom-color: rgba(0, 0, 0, 0.2);
   position: absolute;
   top: -7px;
@@ -4760,7 +4760,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 316, ../../app/styles/compass_twitter_bootstrap/_navbar.scss */
 .navbar-fixed-bottom .dropdown-menu:before {
-  border-top: 7px solid #ccc;
+  border-top: 7px solid #cccccc;
   border-top-color: rgba(0, 0, 0, 0.2);
   border-bottom: 0;
   bottom: -7px;
@@ -5110,7 +5110,7 @@ input[type="submit"].btn.btn-mini {
   display: inline-block;
   padding: 5px 14px;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
@@ -5189,9 +5189,9 @@ input[type="submit"].btn.btn-mini {
   width: 560px;
   margin: -250px 0 0 -280px;
   background-color: white;
-  border: 1px solid #999;
+  border: 1px solid #999999;
   border: 1px solid rgba(0, 0, 0, 0.3);
-  *border: 1px solid #999;
+  *border: 1px solid #999999;
   /* IE6-7 */
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -5219,7 +5219,7 @@ input[type="submit"].btn.btn-mini {
 /* line 54, ../../app/styles/compass_twitter_bootstrap/_modals.scss */
 .modal-header {
   padding: 9px 15px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #eeeeee;
 }
 /* line 58, ../../app/styles/compass_twitter_bootstrap/_modals.scss */
 .modal-header .close {
@@ -5249,7 +5249,7 @@ input[type="submit"].btn.btn-mini {
   margin-bottom: 0;
   text-align: right;
   background-color: #f5f5f5;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #dddddd;
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
@@ -5379,7 +5379,7 @@ input[type="submit"].btn.btn-mini {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -5540,7 +5540,7 @@ input[type="submit"].btn.btn-mini {
   display: block;
   padding: 4px;
   line-height: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -6202,7 +6202,7 @@ html {
 
 /* line 49, ../../app/styles/compass_twitter_bootstrap/_reset.scss */
 a:focus {
-  outline: thin dotted #333;
+  outline: thin dotted #333333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -6338,7 +6338,7 @@ a:hover {
 .img-polaroid {
   padding: 4px;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -7052,7 +7052,7 @@ pre {
   white-space: pre;
   white-space: pre-wrap;
   background-color: #f5f5f5;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -7261,7 +7261,7 @@ input[type="file"] {
 /* line 162, ../../app/styles/compass_twitter_bootstrap/_forms.scss */
 select {
   width: 220px;
-  border: 1px solid #bbb;
+  border: 1px solid #bbbbbb;
   background-color: white;
 }
 
@@ -7276,7 +7276,7 @@ select:focus,
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted #333;
+  outline: thin dotted #333333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -7763,7 +7763,7 @@ select:focus:required:invalid:focus {
   text-align: center;
   text-shadow: 0 1px 0 white;
   background-color: #eeeeee;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
 }
 /* line 443, ../../app/styles/compass_twitter_bootstrap/_forms.scss */
 .input-append .add-on,
@@ -9186,7 +9186,7 @@ li[class*=" icon-"].icon-large:before {
   margin: 2px 0 0;
   list-style: none;
   background-color: white;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   *border-right-width: 2px;
   *border-bottom-width: 2px;
@@ -9522,7 +9522,7 @@ button.close {
 }
 /* line 43, ../../app/styles/compass_twitter_bootstrap/_buttons.scss */
 .btn:focus {
-  outline: thin dotted #333;
+  outline: thin dotted #333333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -10312,7 +10312,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 104, ../../app/styles/compass_twitter_bootstrap/_navs.scss */
 .nav-tabs {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #dddddd;
 }
 
 /* line 108, ../../app/styles/compass_twitter_bootstrap/_navs.scss */
@@ -10340,7 +10340,7 @@ input[type="submit"].btn.btn-mini {
 .nav-tabs > .active > a:hover {
   color: #555555;
   background-color: white;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   border-bottom-color: transparent;
   cursor: default;
 }
@@ -10380,7 +10380,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 169, ../../app/styles/compass_twitter_bootstrap/_navs.scss */
 .nav-tabs.nav-stacked > li > a {
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -10537,7 +10537,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 298, ../../app/styles/compass_twitter_bootstrap/_navs.scss */
 .tabs-below > .nav-tabs {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #dddddd;
 }
 
 /* line 301, ../../app/styles/compass_twitter_bootstrap/_navs.scss */
@@ -10561,7 +10561,7 @@ input[type="submit"].btn.btn-mini {
 /* line 313, ../../app/styles/compass_twitter_bootstrap/_navs.scss */
 .tabs-below > .nav-tabs > .active > a,
 .tabs-below > .nav-tabs > .active > a:hover {
-  border-color: transparent #ddd #ddd #ddd;
+  border-color: transparent #dddddd #dddddd #dddddd;
 }
 
 /* line 322, ../../app/styles/compass_twitter_bootstrap/_navs.scss */
@@ -10582,7 +10582,7 @@ input[type="submit"].btn.btn-mini {
 .tabs-left > .nav-tabs {
   float: left;
   margin-right: 19px;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid #dddddd;
 }
 
 /* line 338, ../../app/styles/compass_twitter_bootstrap/_navs.scss */
@@ -10601,7 +10601,7 @@ input[type="submit"].btn.btn-mini {
 /* line 346, ../../app/styles/compass_twitter_bootstrap/_navs.scss */
 .tabs-left > .nav-tabs .active > a,
 .tabs-left > .nav-tabs .active > a:hover {
-  border-color: #ddd transparent #ddd #ddd;
+  border-color: #dddddd transparent #dddddd #dddddd;
   *border-right-color: white;
 }
 
@@ -10609,7 +10609,7 @@ input[type="submit"].btn.btn-mini {
 .tabs-right > .nav-tabs {
   float: right;
   margin-left: 19px;
-  border-left: 1px solid #ddd;
+  border-left: 1px solid #dddddd;
 }
 
 /* line 357, ../../app/styles/compass_twitter_bootstrap/_navs.scss */
@@ -10628,7 +10628,7 @@ input[type="submit"].btn.btn-mini {
 /* line 365, ../../app/styles/compass_twitter_bootstrap/_navs.scss */
 .tabs-right > .nav-tabs .active > a,
 .tabs-right > .nav-tabs .active > a:hover {
-  border-color: #ddd #ddd #ddd transparent;
+  border-color: #dddddd #dddddd #dddddd transparent;
   *border-left-color: white;
 }
 
@@ -10988,7 +10988,7 @@ input[type="submit"].btn.btn-mini {
   display: inline-block;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-bottom: 7px solid #ccc;
+  border-bottom: 7px solid #cccccc;
   border-bottom-color: rgba(0, 0, 0, 0.2);
   position: absolute;
   top: -7px;
@@ -11008,7 +11008,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 316, ../../app/styles/compass_twitter_bootstrap/_navbar.scss */
 .navbar-fixed-bottom .dropdown-menu:before {
-  border-top: 7px solid #ccc;
+  border-top: 7px solid #cccccc;
   border-top-color: rgba(0, 0, 0, 0.2);
   border-bottom: 0;
   bottom: -7px;
@@ -11358,7 +11358,7 @@ input[type="submit"].btn.btn-mini {
   display: inline-block;
   padding: 5px 14px;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
@@ -11437,9 +11437,9 @@ input[type="submit"].btn.btn-mini {
   width: 560px;
   margin: -250px 0 0 -280px;
   background-color: white;
-  border: 1px solid #999;
+  border: 1px solid #999999;
   border: 1px solid rgba(0, 0, 0, 0.3);
-  *border: 1px solid #999;
+  *border: 1px solid #999999;
   /* IE6-7 */
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -11467,7 +11467,7 @@ input[type="submit"].btn.btn-mini {
 /* line 54, ../../app/styles/compass_twitter_bootstrap/_modals.scss */
 .modal-header {
   padding: 9px 15px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #eeeeee;
 }
 /* line 58, ../../app/styles/compass_twitter_bootstrap/_modals.scss */
 .modal-header .close {
@@ -11497,7 +11497,7 @@ input[type="submit"].btn.btn-mini {
   margin-bottom: 0;
   text-align: right;
   background-color: #f5f5f5;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #dddddd;
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
@@ -11627,7 +11627,7 @@ input[type="submit"].btn.btn-mini {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -11788,7 +11788,7 @@ input[type="submit"].btn.btn-mini {
   display: block;
   padding: 4px;
   line-height: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -12601,7 +12601,7 @@ a.label:hover, a.badge:hover {
   /* line 126, ../../app/styles/compass_twitter_bootstrap/_responsive-767px-max.scss */
   input[type="checkbox"],
   input[type="radio"] {
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
   }
 
   /* line 131, ../../app/styles/compass_twitter_bootstrap/_responsive-767px-max.scss */
@@ -14023,7 +14023,7 @@ a.label:hover, a.badge:hover {
 
 /* line 178, ../../app/styles/_leaflet.scss */
 .leaflet-zoom-box {
-  border: 2px dotted #05f;
+  border: 2px dotted #0055ff;
   background: white;
   opacity: 0.5;
 }
@@ -14038,7 +14038,7 @@ a.label:hover, a.badge:hover {
 /* line 193, ../../app/styles/_leaflet.scss */
 .leaflet-bar {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-  border: 1px solid #888;
+  border: 1px solid #888888;
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
@@ -14046,7 +14046,7 @@ a.label:hover, a.badge:hover {
 /* line 199, ../../app/styles/_leaflet.scss */
 .leaflet-bar-part {
   background-color: rgba(255, 255, 255, 0.8);
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #aaaaaa;
 }
 
 /* line 203, ../../app/styles/_leaflet.scss */
@@ -14207,7 +14207,7 @@ a.label:hover, a.badge:hover {
 /* line 317, ../../app/styles/_leaflet.scss */
 .leaflet-control-layers-separator {
   height: 0;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #dddddd;
   margin: 5px -10px 5px -6px;
 }
 
@@ -14215,7 +14215,7 @@ a.label:hover, a.badge:hover {
 /* line 326, ../../app/styles/_leaflet.scss */
 .leaflet-container .leaflet-control-attribution {
   background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 0 5px #bbb;
+  box-shadow: 0 0 5px #bbbbbb;
   margin: 0;
 }
 
@@ -14244,13 +14244,13 @@ a.label:hover, a.badge:hover {
 
 /* line 346, ../../app/styles/_leaflet.scss */
 .leaflet-control-scale-line {
-  border: 2px solid #777;
+  border: 2px solid #777777;
   border-top: none;
   color: black;
   line-height: 1.1;
   padding: 2px 5px 1px;
   font-size: 11px;
-  text-shadow: 1px 1px 1px #fff;
+  text-shadow: 1px 1px 1px white;
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.2);
   white-space: nowrap;
@@ -14259,7 +14259,7 @@ a.label:hover, a.badge:hover {
 
 /* line 359, ../../app/styles/_leaflet.scss */
 .leaflet-control-scale-line:not(:first-child) {
-  border-top: 2px solid #777;
+  border-top: 2px solid #777777;
   border-bottom: none;
   margin-top: -2px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -14267,7 +14267,7 @@ a.label:hover, a.badge:hover {
 
 /* line 365, ../../app/styles/_leaflet.scss */
 .leaflet-control-scale-line:not(:first-child):not(:last-child) {
-  border-bottom: 2px solid #777;
+  border-bottom: 2px solid #777777;
 }
 
 /* line 371, ../../app/styles/_leaflet.scss */
@@ -14361,15 +14361,15 @@ a.label:hover, a.badge:hover {
 /* line 441, ../../app/styles/_leaflet.scss */
 .leaflet-popup-scrolled {
   overflow: auto;
-  border-bottom: 1px solid #ddd;
-  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
 }
 
 /* div icon */
 /* line 450, ../../app/styles/_leaflet.scss */
 .leaflet-div-icon {
   background: #fff;
-  border: 1px solid #666;
+  border: 1px solid #666666;
 }
 
 /* line 454, ../../app/styles/_leaflet.scss */
@@ -14570,9 +14570,13 @@ aside .filters input[type="checkbox"] {
   right: 15px;
   z-index: 1000;
 }
+/* line 153, ../../app/styles/haiti_hack_map.scss */
+#scroll a {
+  color: #333;
+}
 
 @media (max-width: 767px) {
-  /* line 155, ../../app/styles/haiti_hack_map.scss */
+  /* line 159, ../../app/styles/haiti_hack_map.scss */
   body {
     padding-left: 0;
     padding-right: 0;

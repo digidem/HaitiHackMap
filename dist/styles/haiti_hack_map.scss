@@ -149,6 +149,10 @@ aside {
   bottom: 15px;
   right: 15px;
   z-index: 1000;
+
+  a {
+    color: #333;
+  }
 }
 
 @media (max-width: 767px) {

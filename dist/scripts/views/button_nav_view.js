@@ -10,7 +10,7 @@
       return ButtonNavView.__super__.constructor.apply(this, arguments);
     }
 
-    ButtonNavView.prototype.tagName = "div";
+    ButtonNavView.prototype.tagName = "nav";
 
     ButtonNavView.prototype.id = "scroll";
 
@@ -49,7 +49,7 @@
       if (target == null) {
         target = null;
       }
-      return $('<button/>').text(text).addClass("btn").data("target", target);
+      return $('<a/>').text(text).addClass("btn").data("target", target);
     };
 
     return ButtonNavView;

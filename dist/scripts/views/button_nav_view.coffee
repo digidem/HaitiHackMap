@@ -1,5 +1,5 @@
 class App.Views.ButtonNavView extends Backbone.View
-  tagName: "div"
+  tagName: "nav"
   id: "scroll"
   className: "btn-group"
 
@@ -26,4 +26,4 @@ class App.Views.ButtonNavView extends Backbone.View
     $("html, body").animate({ scrollTop: top }, "slow")
 
   createButton: (text, target = null) ->
-    $('<button/>').text(text).addClass("btn").data("target", target)
+    $('<a/>').text(text).addClass("btn").data("target", target)
