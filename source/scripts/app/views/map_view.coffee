@@ -7,7 +7,6 @@ class App.Views.MapView extends Backbone.View
   initialize: ->
     @render()
     @$el.height($(document).height())
-    @listenTo App.search, "result:select", @resultSelected
     @tileProvider ?= "osm"
     @
 
@@ -20,12 +19,6 @@ class App.Views.MapView extends Backbone.View
     @map.setView(loc, @ZOOM) # TODO: Center in country
     tiles = L.tileLayer(@tilesUrlPattern())
     @map.addLayer(tiles)
-
-  resultSelected: (model) ->
-    marker = new App.Views.DefaultMarkerView
-      model: model
-      map: @map
-    @map.panTo(marker.location())
 
   tilesUrlPattern: ->
     switch @tileProvider
