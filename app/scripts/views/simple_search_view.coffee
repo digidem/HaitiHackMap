@@ -12,5 +12,4 @@ class App.Views.SimpleSearchView extends App.Views.SearchView
 
   selectResult: (model) ->
     @emptyResults()
-    $('[name="Branchsite[latitude]"]').val(model.get("lat"))
-    $('[name="Branchsite[longitude]"]').val(model.get("lon"))
+    App.options.chosenResultsFunction(model)

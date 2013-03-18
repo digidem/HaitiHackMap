@@ -933,23 +933,28 @@
         <label for="longitude">Coordinates</label>
         Lat:
         <input size="20" maxlength="45" name="Branchsite[longitude]"
-          id="Branchsite_longitude" type="text" data-addressSearch="target">
+          id="Branchsite_longitude" type="text" data-addressSearch="longitude">
           Lon:
           <input size="20" maxlength="45" name="Branchsite[latitude]" id="Branchsite_latitude"
-          type="text" data-addressSearch="target">
+          type="text" data-addressSearch="latitude">
         <div class="errorMessage" id="Branchsite_longitude_em_" style="display:none"></div>    <div class="errorMessage" id="Branchsite_latitude_em_" style="display:none"></div></div>
 
       <div class="row buttons">
         <input type="submit" name="yt4" value="Create">
       </div>
 
-      <input type="text" name="builtAddress" placeholder="Fill me out!">
+      <div>
+        <input type="text" name="addressFound" placeholder="This is the address as found in Nominatim" size="100">
+      </div>
+
+      <div>
+        <input type="hidden" name="builtAddress" placeholder="Fill me out!" size="100">
+      </div>
 
     </form>
 
     <script>
       new SearchListener($('[data-addressSearch="base"]'));
-      new App.SearchRouter();
     </script>
 </body>
 </html>
