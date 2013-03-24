@@ -1,0 +1,1 @@
+(function(){$(function(){return $(document).ajaxStart(function(){return $(".loader").addClass("loading")}),$(document).ajaxStop(function(){return $(".loading").removeClass("loading")})})}).call(this);
