@@ -1,0 +1,2 @@
+//= require ./vendor
+//= require ./app
