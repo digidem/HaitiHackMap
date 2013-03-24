@@ -52,9 +52,12 @@ class App.Views.SearchView extends Backbone.View
   showResults: () ->
     @renderResultPane()
     @emptyResults()
-    @$osm_results.html(@collection.map (model) ->
-      new App.Views.OSMResultView(model: model).el
-    )
+    if @collection.length > 0
+      @$osm_results.html(@collection.map (model) ->
+        new App.Views.OSMResultView(model: model).el
+      )
+    else
+      @$osm_results.html("<li>No results found</li>")
     @$osm_results.fadeIn('fast')
 
   selectResult: (model) ->
